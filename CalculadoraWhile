@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Operaciones{
+
+	public static void main(String args[]){
+
+	Scanner calc = new Scanner(System.in);
+	double num1 = 0, num2 = 0, resultado = 0;
+	int param = 2;
+	
+	System.out.println("");
+	System.out.println("Bienvenido a la calculadora CASE");
+	System.out.println("");
+	System.out.println("");
+	System.out.println("1.- Suma");
+	System.out.println("2.- Resta");
+	System.out.println("3.- Multiplcacion");
+	System.out.println("4.- Division");
+	System.out.println("Por favor ingrese que operacion desea hacer");
+	param = calc.nextInt();
+		
+		//Validamos que la opción ingresada sea correcta
+		if(param > 4){System.out.println("La opción ingresada es incorrecta");
+				System.exit(0);}
+
+	System.out.println("");
+	System.out.println("Por favor ingrese su primer valor: ");
+	num1 = calc.nextInt();
+	System.out.println("Por favor ingrese su segundo valor: ");
+	num2 = calc.nextInt();
+	
+
+	
+	switch(param){
+
+	case 1: resultado = num1 + num2;
+		System.out.println("El resultado es: "+resultado);
+		break;
+
+	case 2: resultado = num1 - num2;
+		System.out.println("El resultado es: "+resultado);
+		break;
+
+	case 3: resultado = num1 * num2;
+		System.out.println("El resultado es: "+resultado);
+		break;
+
+	case 4: resultado = num1 / num2;
+		System.out.println("El resultado es: "+resultado);
+		break;
+
+	
+
+		}
+
+	}
+
+}
