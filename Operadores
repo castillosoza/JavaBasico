@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class Cocacola {
+
+	public static void main(String args[]){
+
+		Scanner Vacaciones = new Scanner(System.in);	
+		String Nombre;
+		int Area = 0, Servicio=0;
+		System.out.println("");
+		System.out.println("*************************************************************************");
+		System.out.println("*************Bienvenido a sistema de vacaciones de Coca Cola*************");
+		System.out.println("*************************************************************************");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("");
+		System.out.println("Por favor ingrese su nombre: ");
+		Nombre = Vacaciones.nextLine();
+		System.out.println("Por favor ingrese la clave de su departamento");
+		System.out.println("1: Departamento de Atencion al cliente");
+		System.out.println("2: Departamento de Logistica");
+		System.out.println("3: Departamento de Gerencia");
+		System.out.println("Ingrese solo un número");
+		Area = Vacaciones.nextInt();
+		System.out.println(":::::::::::::::::::::::::::::::::::::::");
+
+		//Presentación al programa
+			if(Area == 1){
+			System.out.println("Bienvenido(a) "+Nombre+" del Departamento de Atencion al cliente");
+			System.out.println(":::::::::::::::::::::::::::::::::::::::");
+
+				}else if(Area == 2){
+				System.out.println("Bienvenido(a) "+Nombre+" del Departamento de Logistica");
+				System.out.println(":::::::::::::::::::::::::::::::::::::::");
+
+					}else if(Area == 3){
+					System.out.println("Bienvenido(a) "+Nombre+" del Departamento de Gerencia");
+					System.out.println(":::::::::::::::::::::::::::::::::::::::");
+					}else {}
+
+
+
+		System.out.println("Por favor ingrese sus años de servicio");
+		Servicio = Vacaciones.nextInt();
+		
+		//Calculo de vacaciones para el Dpto. de Atencion al cliente
+			if(Area ==1 && Servicio==1){
+			System.out.println("Sr.(a) "+Nombre+" usted posee 6 días de vacaciones.");
+				}else if(Area == 1 && Servicio>=2 && Servicio<7){
+				System.out.println("Sr.(a) "+Nombre+" usted posee 14 días de vacaciones.");
+					}else if(Area == 1 && Servicio>=7){
+					System.out.println("Sr.(a) "+Nombre+" usted posee 20 días de vacaciones.");
+					}
+			
+
+		//Calculo de vacaciones para el Dpto. de Logistica
+			if(Area ==2 && Servicio==1){
+			System.out.println("Sr.(a) "+Nombre+" usted posee 7 días de vacaciones.");
+				}else if(Area == 2 && Servicio>=2 && Servicio<7){
+				System.out.println("Sr.(a) "+Nombre+" usted posee 15 días de vacaciones.");
+					}else if(Area == 2 && Servicio>=7){
+					System.out.println("Sr.(a) "+Nombre+" usted posee 22 días de vacaciones.");
+					}
+
+		////Calculo de vacaciones para el Dpto. de Logistica
+			if(Area ==3 && Servicio==1){
+			System.out.println("Sr.(a) "+Nombre+" usted posee 10 días de vacaciones.");
+				}else if(Area == 3 && Servicio>=2 && Servicio<7){
+				System.out.println("Sr.(a) "+Nombre+" usted posee 20 días de vacaciones.");
+					}else if(Area == 3 && Servicio>=7){
+					System.out.println("Sr.(a) "+Nombre+" usted posee 30 días de vacaciones.");
+					}else if(Area >3)
+					{System.out.println("Estimado(a) "+Nombre+", su departamento no existe.");}
+					else{};
+	
+
+	}
+
+
+}
