@@ -1,0 +1,93 @@
+import java.util.Scanner;
+
+public class Calculadora{
+
+	public static void main(String args[]){
+
+	Scanner calc = new Scanner(System.in);
+	int pregunta = 0;
+	int operador = 0;
+	double num1 = 0, num2 = 0, num3 = 0, resultado = 0;
+
+
+	System.out.println("Bienvenid@ a mi primer calculadora");
+	System.out.println("¿Que operacion desea hacer?");
+	System.out.println("1.- Sumar");
+	System.out.println("2.- Restar");
+	System.out.println("3.- Dividir");
+	System.out.println("4.- Multiplicar");
+	System.out.println("Ingrese una opción: ");
+        operador = calc.nextInt();
+
+		//Ingreso opciones
+       		if(operador == 1){
+			System.out.println("Usted ha seleccionado sumar");
+			System.out.println("Por favor ingrese su primer numero: ");
+			num1 = calc.nextInt();
+			System.out.println("Por favor ingrese su segundo numero: ");
+			num2 = calc.nextInt();
+			System.out.println("¿Desea ingresar otro número? (1 = si / 2 = no)");
+			pregunta = calc.nextInt();
+				if(pregunta== 1){System.out.println("Por favor ingrese su tercer numero: ");
+						 num3 = calc.nextInt();
+						 resultado = num1 + num2 + num3;
+  						 System.out.println("El resultado de su suma es: "+resultado);
+						 }else{
+  						 resultado = num1 + num2;
+						 System.out.println("El resultado de su suma es: "+resultado);}
+			
+		}else if(operador == 2){
+			System.out.println("Usted ha seleccionado restar");
+			System.out.println("Por favor ingrese su primer numero: ");
+			num1 = calc.nextInt();
+			System.out.println("Por favor ingrese su segundo numero: ");
+			num2 = calc.nextInt();
+			System.out.println("¿Desea ingresar otro número? (1 = si / 2 = no)");
+			pregunta = calc.nextInt();
+				if(pregunta== 1){System.out.println("Por favor ingrese su tercer numero: ");
+						 num3 = calc.nextInt();
+						 resultado = num1 - num2 - num3;
+  						 System.out.println("El resultado de su resta es: "+resultado);
+						 }else{
+  						 resultado = num1 - num2;
+						 System.out.println("El resultado de su resta es: "+resultado);}
+		}else if(operador == 3){
+			System.out.println("Usted ha seleccionado dividir");
+			System.out.println("Por favor ingrese su primer numero: ");
+			num1 = calc.nextInt();
+			System.out.println("Por favor ingrese su segundo numero: ");
+			num2 = calc.nextInt();
+			System.out.println("¿Desea ingresar otro número? (1 = si / 2 = no)");
+			pregunta = calc.nextInt();
+				if(pregunta== 1){System.out.println("Por favor ingrese su tercer numero: ");
+						 num3 = calc.nextInt();
+						 resultado = num1 / num2 / num3;
+  						 System.out.println("El resultado de su division es: "+resultado);
+						 }else{
+  						 resultado = num1 / num2;
+						 System.out.println("El resultado de su division es: "+resultado);}
+		}else if(operador == 4){
+			System.out.println("Usted ha seleccionado multiplicar");
+			System.out.println("Por favor ingrese su primer numero: ");
+			num1 = calc.nextInt();
+			System.out.println("Por favor ingrese su segundo numero: ");
+			num2 = calc.nextInt();
+			System.out.println("¿Desea ingresar otro número? (1 = si / 2 = no)");
+			pregunta = calc.nextInt();
+				if(pregunta== 1){System.out.println("Por favor ingrese su tercer numero: ");
+						 num3 = calc.nextInt();
+						 resultado = num1 * num2 * num3;
+  						 System.out.println("El resultado de su multiplicacion es: "+resultado);
+						 }else{
+  						 resultado = num1 * num2;
+						 System.out.println("El resultado de su multiplicacion es: "+resultado);}
+		}else{System.out.println("Opcion incorrecta, muchas gracias por ocupar mi primer calculadora, ¡Hasta luego!");}
+
+		//Ejecución de opción
+		
+
+		
+
+}
+
+}
