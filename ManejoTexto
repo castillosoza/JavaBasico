@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class ManejoTexto {
+
+	public static void main(String args[]){
+	
+	Scanner in = new Scanner(System.in);
+	String texto_original = "", texto_substraccion = "";
+	int original = 0, desde = 0, hasta = 0;
+	
+
+	System.out.print("Por favor ingrese cualquier palabra: ");
+	texto_original = in.nextLine();
+
+	original = texto_original.length();
+
+	System.out.println("La cadena posee un largo de "+original+" caracteres");
+
+	System.out.print("Por favor ingrese el punto inicial de extraccion de datos: ");
+	desde = in.nextInt();
+
+	System.out.print("Por favor ingrese el punto final de extraccion de datos: ");
+	hasta = in.nextInt();
+
+	texto_substraccion = texto_original.substring(desde,hasta);
+
+	System.out.print("El texto extraido es: "+texto_substraccion );	
+
+
+	}
+
+}
