@@ -7,21 +7,27 @@ public class PromedioVectoresDinamico{
 	int notas = 0;
 	Scanner entrada = new Scanner(System.in);
 
+//Consultamos cuantas notas se van a ingresar, por medio de la clase Scanner
 	System.out.print("¿Cuantos notas deseas ingresar?: ");
 	notas = entrada.nextInt();
+
+// Declaramos las variables a utilizar
 
 	int num[] = new int[notas];
 	double promedio =0, suma =0;
 
+//Medianto un contador de un ciclo for, consultamos al usuario las notas que ingresara, de acuerdo lo declarado en la variable "notas"
 	for(int i=0; i<num.length; i++){
 	
 		System.out.println("Por favor ingrese la nota #"+(i+1)+ "(Por favor ingresar numeros enteros, sin decimales)");
 		num [i] = entrada.nextInt();
 
+//Sumamos las notas
 		suma = num[i]+suma;
 
 	}
-	
+
+//Calculamos el promedio de notas
 		promedio = suma/num.length;
 
 		System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
