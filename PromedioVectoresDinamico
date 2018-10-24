@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class PromedioVectoresDinamico{
+
+	public static void main(String args[]){
+
+	int notas = 0;
+	Scanner entrada = new Scanner(System.in);
+
+	System.out.print("¿Cuantos notas deseas ingresar?: ");
+	notas = entrada.nextInt();
+
+	int num[] = new int[notas];
+	double promedio =0, suma =0;
+
+	for(int i=0; i<num.length; i++){
+	
+		System.out.println("Por favor ingrese la nota #"+(i+1)+ "(Por favor ingresar numeros enteros, sin decimales)");
+		num [i] = entrada.nextInt();
+
+		suma = num[i]+suma;
+
+	}
+	
+		promedio = suma/num.length;
+
+		System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
+
+		System.out.println("Las notas ingresadas son:");
+
+	for(int i = 0; i<num.length; i++){
+	
+		System.out.println("Nota #"+(i+1)+": "+num[i]);
+
+	}
+	if(promedio>=40){
+	
+		System.out.println("El promedio de nota es "+promedio+". El alumno aprueba el curso, ¡Felicidades!");
+	}else{System.out.println("El promedio de nota es "+promedio+". El alumno reprueba el curso, lo siento :(");}
+		
+	}
+
+}
